@@ -1,0 +1,24 @@
+$font_size: 14px;
+$font_color: #333333;
+$font: 'RobotoLight';
+$fontBold: 'UbuntuBold';
+$bg_color: #ffffff;
+$line_height: 1.1;
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("../fonts/RobotoLight/RobotoLight.eot");
+    src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RobotoLight/RobotoLight.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "UbuntuBold";
+    src: url("../fonts/UbuntuBold/UbuntuBold.eot");
+    src: url("../fonts/UbuntuBold/UbuntuBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UbuntuBold/UbuntuBold.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}

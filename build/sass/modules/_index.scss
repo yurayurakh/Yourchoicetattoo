@@ -1,0 +1,295 @@
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .container {
+        width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+section {
+    padding: 60px 0;
+}
+
+.title-block {
+    text-align: center;
+    margin: 0 0 30px;
+    font-size: 36px;
+    font-family: $fontBold;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.red_title-block {
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    font-size: 55px;
+    font-family: $fontBold;
+    text-align: left;
+    color: #c10029;
+    text-shadow: 0 10px 30px rgba(255, 0, 42, .4);
+}
+
+.sub_title-block {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-size: 60px;
+    color: rgba(255, 255, 255, .2);
+    font-weight: normal;
+}
+
+.sub-sub_title-block {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    font-family: $fontBold;
+}
+
+.btn-tatoo {
+    background: linear-gradient(0deg, #c10029, #eb2653);
+    padding: 8px 35px;
+    font-size: 47px;
+    font-family: $fontBold;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(255, 0, 42, .4);
+}
+
+.social__btn {
+    position: relative;
+    top: 0;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    width: 290px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-family: $fontBold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background: linear-gradient(0deg, #c10029, #eb2653);
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 4px;
+        width: 280px;
+        background: #8e0220;
+    }
+
+    &:hover {
+        outline: none;
+        transition: top .2s ease;
+        background: linear-gradient(0deg, darken(#c10029, 10%), darken(#eb2653, 10%));
+        top: 2px;
+
+        &:after {
+            transition: bottom .3s ease;
+            bottom: 4px;
+            display: none;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/********************* Form ******************/
+
+// Form
+.modal__form {
+    margin-top: 30px;
+    padding: 0 40px;
+
+    .form {
+        font-size: 0;
+
+        &__item {
+            vertical-align: middle;
+            position: relative;
+            font-size: 16px;
+            display: inline-block;
+            width: 31%;
+            margin-right: 3%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &_label {
+                position: absolute;
+                transition: .2s;
+                cursor: text;
+                top: 20px;
+                left: 30px;
+                font-size: 16px;
+                color: #97a4b1;
+            }
+
+            &_input {
+                display: block;
+                width: 100%;
+                border: 1px solid #e6ecf2;
+                border-radius: 3px;
+                padding: 20px 30px 0;
+                box-sizing: border-box;
+                height: 60px;
+                transition: .2s;
+                box-shadow: none;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 10px rgba(131, 203, 32, .2);
+                    border: 2px solid #9fd80b;
+
+                    & ~ .form__item_label {
+                        font-size: 12px;
+                        top: 8px;
+                    }
+                }
+            }
+
+            .input-no-empty {
+                font-size: 12px;
+                top: 8px;
+            }
+
+            .social__btn {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+// Form validate
+.modal__form .form__item .has-error {
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    border: 1px solid #eb2653;
+}
+
+/*********************** Modal ***************/
+
+// Modal Popup
+.modal {
+    overflow: hidden;
+    z-index: 2;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+//Body class
+.model-open {
+    overflow: hidden;
+    position: fixed
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    position: relative;
+    margin: 100px auto;
+    padding: 20px;
+    width: 35%;
+    max-width: 400px;
+
+    .modal__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-transform: none;
+        text-align: center;
+    }
+
+    .modal__sup-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .modal__form {
+        padding: 0 20px;
+        .form__item {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Modal Success
+.modal-success {
+
+    .close {
+        display: none;
+    }
+
+    .modal-content {
+        color: #0d870a;
+
+        .modal__sup-title {
+            font-size: 18px;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: -45px;
+    right: -30px;
+    color: #fff;
+    font-size: 50px;
+}
+
+.close:hover,
+.close:focus {
+    color: #eb2653;
+    text-decoration: none;
+    cursor: pointer;
+}

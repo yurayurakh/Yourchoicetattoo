@@ -1,0 +1,53 @@
+.footer {
+    position: relative;
+    box-shadow: 0 0 80px rgba(0, 0, 0, .6);
+
+    #map {
+        width: 100%;
+        height: 550px;
+    }
+
+    &__info {
+        z-index: 2;
+        text-align: center;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        &_address {
+            color: #ffffff;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &_phone {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 400px;
+
+            a {
+                position: relative;
+                padding-left: 40px;
+                font-size: 40px;
+                color: #c10029;
+                text-shadow: 0 10px 30px rgba(255, 0, 42, .4);
+                text-decoration: none;
+                font-family: $fontBold;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 31px;
+                    height: 31px;
+                    margin-top: -15.5px;
+                    background: url("../img/icon/icon_tel.png") center no-repeat;
+                }
+            }
+        }
+    }
+}

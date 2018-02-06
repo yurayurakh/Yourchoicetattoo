@@ -1,0 +1,22 @@
+html {
+    width: 100%;
+    font-size: 100.01%;
+
+    body {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0 auto;
+        font-size: $font_size;
+        font-family: $font, 'Helvetica', 'Arial', sans-serif;
+        line-height: $line_height;
+        color: $font_color;
+        background: $bg_color;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
