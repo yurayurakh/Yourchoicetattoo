@@ -131,6 +131,30 @@ section {
     }
 }
 
+//Fix phone
+.fix_phone {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    border-radius: 100%;
+    z-index: 10;
+
+    @media (max-width: 768px) {
+        bottom: 0;
+        left: 0;
+        width: 60px;
+    }
+
+    &__link {
+        display: block;
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+
 /********************* Form ******************/
 
 // Form
